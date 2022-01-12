@@ -26,9 +26,10 @@ Synthwave vibes for your Conky and desktop.
 * Modify **.conky_mpd** to use real data from Music Player Daemon (mpd). I am not using it, so I have just some static info there.
 * Modify **.shitstodo** content with your TODO data.
 * Set **conky-synthwave/synthwave.jpg** as desktop wallpaper.
+* Play with **gap_x** and **gap_y** values in config files. Positions are fixed for 1920x1080 resolution.
 
 # Notes
-* This conky config is using **sed**, **tail**, **awk**. Check from terminal that you have them installed.
+* This conky config is using **gcal**, **sensors**, **sed**, **tail**, **awk**. Check from terminal that you have them installed.
 * Config files are in **Lua** syntax.
 * **python3** needs to be instaled. Tested with 3.9.2.
 * Tested on **MX Linux 21 Wildflower**.
