@@ -1,0 +1,40 @@
+conky.config = {
+    xinerama_head=1,
+    background=false,
+    use_xft=true,
+    font="Luculent:pixelsize=12,weight:bold",
+    xftalpha=1,
+    total_run_times=0,
+    own_window=true,
+    own_window_transparent=true,
+    own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
+    own_window_type="desktop",
+    own_window_argb_visual=true,
+    own_window_class="override",
+    double_buffer=true,
+    draw_shades=true,
+    draw_outline=false,
+    draw_borders=false,
+    border_width=0,
+    default_color="cyan",
+    default_shade_color="black",
+    default_outline_color="white",
+    minimum_width=600,
+    maximum_width=600,
+    alignment="bottom_right",
+    gap_x=16,
+    gap_y=0,
+    cpu_avg_samples=10,
+    override_utf8_locale=true,
+    text_buffer_size=2048
+}
+
+--leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
+conky.text = [[
+${offset 483}┌─────────────┐
+${offset 483}│  TCP / TOR  ├┐
+${offset 483}└─────────────┘│
+${offset 588}│
+${execi 15 ss -t -a | grep -e "ESTAB" -e "9050" | tail -n 10 | sed 's/.\{7\}$//' | sed 's/^/                    /; s/^.*\(.\{83\}\)/\1/' | sed 's/$/ ┤/'}
+${offset 588}│
+]]

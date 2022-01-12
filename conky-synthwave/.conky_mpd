@@ -1,0 +1,46 @@
+conky.config = {
+    xinerama_head=1,
+    background=false,
+    use_xft=true,
+    font="Luculent:pixelsize=12,weight:bold",
+    xftalpha=1,
+    total_run_times=0,
+    own_window=true,
+    own_window_type="override",
+    own_window_transparent=true,
+    own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
+    own_window_type="desktop",
+    own_window_argb_visual=true,
+    own_window_class="override",
+    double_buffer=true,
+    draw_shades=false,
+    draw_graph_borders=true,
+    default_color="red",
+    default_shade_color="yellow",
+    default_outline_color="white",
+    alignment="top_middle",
+    gap_x=0,
+    gap_y=290,
+    cpu_avg_samples=10,
+    override_utf8_locale=true,
+    minimum_height=200,
+    maximum_width=440,
+    color2="DC143C"
+}
+
+--leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
+conky.text = [[
+│┌──────────────────────┐
+├┤  MUSIC PLAYER DAEMON │
+│└──────────────────────┘
+#├─ Status: ${mpd_status} / Volume: ${mpd_vol}% / ${exec amixer get Master | grep "Front Left:" | awk '{print $5}'}
+#├─ Artist: ${mpd_artist}
+#├─ Title : ${mpd_title}
+#├─ Album : ${mpd_album}
+#│
+#${color2}47% ${mpd_bar 3,420}${color}
+├─ Status: Running / Volume: 47% / ${exec amixer get Master | grep "Front Left:" | awk '{print $5}'}
+├─ Artist: Iron Maiden
+├─ Title : Fear Of The Dark
+└─ Album : Fear Of The Dark (1992)
+]]

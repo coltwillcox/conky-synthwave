@@ -1,0 +1,59 @@
+conky.config = {
+    xinerama_head=1,
+    background=false,
+    use_xft=true,
+    font="Luculent:pixelsize=12,weight:bold",
+    xftalpha=1,
+    total_run_times=0,
+    own_window=true,
+    own_window_transparent=true,
+    own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
+    own_window_type="desktop",
+    own_window_argb_visual=true,
+    own_window_class="override",
+    double_buffer=true,
+    draw_shades=true,
+    draw_outline=false,
+    draw_borders=false,
+    draw_graph_borders=true,
+    stippled_borders=0,
+    border_inner_margin=4,
+    border_outer_margin=4,
+    border_width=0,
+    default_color="cyan",
+    default_shade_color="black",
+    default_outline_color="white",
+    alignment="top_left",
+    gap_x=20,
+    gap_y=673,
+    cpu_avg_samples=10,
+    override_utf8_locale=true,
+    update_interval=1
+}
+
+--leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
+conky.text = [[
+│┌───────────────┐
+├┤ SPEEDTEST.NET │
+│└───────────────┘
+│
+├
+├
+├
+├
+├
+├
+├
+├
+├
+│
+│
+│
+│
+${texeci 28800 speedtest --progress=no > /home/user/.conky/conky-synthwave/.speeds 2>&1}
+${voffset -196}${exec sed "s/^/  /" /home/user/.conky/conky-synthwave/.speeds}
+
+
+
+
+]]

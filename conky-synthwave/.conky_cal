@@ -1,0 +1,59 @@
+conky.config = {
+    xinerama_head=1,
+    background=false,
+    use_xft=true,
+    font="Luculent:pixelsize=12,weight:bold",
+    xftalpha=1,
+    total_run_times=0,
+    own_window=true,
+    own_window_transparent=true,
+    own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
+    own_window_type="desktop",
+    own_window_argb_visual=true,
+    own_window_class="override",
+    double_buffer=true,
+    draw_shades=true,
+    draw_outline=false,
+    draw_borders=false,
+    draw_graph_borders=true,
+    stippled_borders=0,
+    default_color="cyan",
+    default_shade_color="black",
+    default_outline_color="white",
+    no_buffers=true,
+    cpu_avg_samples=2,
+    net_avg_samples=2,
+    override_utf8_locale=true,
+    use_spacer=none,
+    minimum_height=150,
+    maximum_width=350,
+    text_buffer_size=2048,
+    color1="cyan",
+    color2="DC143C",
+    color3="FFFF00",
+    alignment="top_left",
+    gap_x=20,
+    gap_y=190
+}
+
+
+--leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
+conky.text = [[
+ ┌────────────┐
+┌┤  CALENDAR  │
+│└────────────┘
+│
+│
+├
+├
+├
+├
+├
+├
+├
+│
+${voffset -132}${execpi 60 sh /home/user/.conky/conky-synthwave/.calendar.sh}
+│
+│
+│
+]]

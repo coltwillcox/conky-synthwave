@@ -1,0 +1,35 @@
+conky.config = {
+    xinerama_head=1,
+    update_interval=1,
+    total_run_times=0,
+    net_avg_samples=1,
+    cpu_avg_samples=1,
+    double_buffer=true,
+    no_buffers=true,
+    use_xft=true,
+    font="Luculent:pixelsize=100",
+    override_utf8_locale=true,
+    own_window_class="Conky",
+    own_window=true,
+    own_window_transparent=true,
+    own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
+    own_window_type="desktop",
+    own_window_argb_visual=true,
+    own_window_class="override",
+    alignment="top_left",
+    gap_x=20,
+    gap_y=20,
+    draw_shades=true,
+    default_color="cyan",
+    default_shade_color="black",
+    color0="ffffff",
+    color1="ffffff",
+    color2="cyan",
+    color3="DC143C"
+}
+
+conky.text = [[
+${voffset -70}${font Luculent:pixelsize=12}${color3}[ ${color2}${time %S}${color3} ]${color}${font}
+${color3}${voffset -85}${time %H}${color}
+${color2}${voffset -55}${time %M}${color}
+]]

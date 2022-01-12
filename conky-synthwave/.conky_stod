@@ -1,0 +1,37 @@
+conky.config = {
+    xinerama_head=1,
+    background=false,
+    use_xft=true,
+    font="Luculent:pixelsize=12,weight:bold",
+    xftalpha=1,
+    total_run_times=0,
+    own_window=true,
+    own_window_transparent=true,
+    own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
+    own_window_type="desktop",
+    own_window_argb_visual=true,
+    own_window_class="override",
+    double_buffer=true,
+    draw_shades=true,
+    draw_outline=false,
+    draw_borders=false,
+    border_width=0,
+    default_color="cyan",
+    default_shade_color="black",
+    default_outline_color="white",
+    alignment="top_left",
+    gap_x=20,
+    gap_y=380,
+    cpu_avg_samples=10,
+    override_utf8_locale=true,
+    color2="DC143C"
+}
+
+--leet chars: ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▾▿
+conky.text = [[
+│┌─────────────┐
+├┤ TODO / RMBR │
+│└─────────────┘
+│
+${exec sed "s/^//" /home/user/.conky/conky-synthwave/.shitstodo}
+]]
